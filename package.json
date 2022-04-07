@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algesthesiah/eazybuild.git"
+  },
+  "author": "algesthesiah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/algesthesiah/eazybuild/issues"
+  },
+  "homepage": "https://github.com/algesthesiah/eazybuild#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "eslint-plugin-airbnb-react": "^1.0.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "stylelint-plugin-standard": "1.0.3",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.stylelintignore": "stylelint --fix",
+    "*.css": "stylelint --allow-empty-input",
+    "*.scss": "stylelint --syntax=scss --allow-empty-input"
+  }
+}
