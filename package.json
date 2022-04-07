@@ -2,14 +2,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/algesthesiah/eazybuild.git"
+    "url": "git+https://github.com/algesthesiah/easybuild.git"
   },
   "author": "algesthesiah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/algesthesiah/eazybuild/issues"
+    "url": "https://github.com/algesthesiah/easybuild/issues"
   },
-  "homepage": "https://github.com/algesthesiah/eazybuild#readme",
+  "homepage": "https://github.com/algesthesiah/easybuild#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",

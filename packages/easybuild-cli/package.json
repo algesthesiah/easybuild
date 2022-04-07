@@ -1,0 +1,14 @@
+{
+  "name": "easybuild-cli",
+  "version": "1.0.0",
+  "description": "easy build cli",
+  "repository": "https://github.com/algesthesiah/easybuild",
+  "main": "index.js",
+  "keywords": [
+    "build"
+  ],
+  "author": "algesthesiah https://github.com/algesthesiah",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
