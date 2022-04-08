@@ -4,13 +4,37 @@
   "description": "easy build cli",
   "repository": "https://github.com/algesthesiah/easybuild",
   "main": "index.js",
-  "bin": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "bin": {
+    "easybuild": "index.js",
+    "eb": "index.js"
+  },
   "keywords": [
     "build"
   ],
   "author": "algesthesiah https://github.com/algesthesiah",
   "license": "MIT",
   "devDependencies": {
-    "inquirer": "^8.2.2"
+    "@rollup/plugin-alias": "^3.1.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/shelljs": "^0.8.11",
+    "esno": "^0.14.1",
+    "inquirer": "^8.2.2",
+    "rollup": "^2.55.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-preserve-shebangs": "^0.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-size-snapshot": "^0.12.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0"
+  },
+  "dependencies": {
+    "commander": "^9.1.0",
+    "shelljs": "^0.8.5"
   }
 }

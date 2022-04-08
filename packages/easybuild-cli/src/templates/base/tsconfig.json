@@ -1,0 +1,4 @@
+{
+  "extends": "base-ts-config",
+  "exclude": ["node_modules", "build", "scripts", "dist"],
+}
