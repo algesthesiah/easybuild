@@ -4,11 +4,13 @@
   "description": "easy build cli",
   "repository": "https://github.com/algesthesiah/easybuild",
   "main": "index.js",
+  "bin": "index.js",
   "keywords": [
     "build"
   ],
   "author": "algesthesiah https://github.com/algesthesiah",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "inquirer": "^8.2.2"
   }
 }
