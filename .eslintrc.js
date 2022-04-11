@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: require.resolve("eslint-plugin-airbnb-react"),
+  extends: "./node_modules/eslint-plugin-airbnb-react",
   globals: {
     React: false,
   },
