@@ -1,3 +1,5 @@
+const prettier = require("eslint-plugin-airbnb-react/prettier");
+
 module.exports = {
-  ...require.resolve('eslint-plugin-airbnb-react/prettier'),
-}
+  ...prettier,
+};

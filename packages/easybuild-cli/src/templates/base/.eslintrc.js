@@ -1,21 +1,21 @@
 module.exports = {
   root: true,
-  extends: require.resolve("eslint-plugin-airbnb-react"),
+  extends: require.resolve('eslint-plugin-airbnb-react'),
   globals: {
     React: false,
   },
   settings: {
-    react: {
-      version: "detect",
+    'react': {
+      version: 'detect',
     },
-    "import/resolver": {
+    'import/resolver': {
       typescript: {},
       alias: {
         map: [],
-        extensions: [".ts", ".tsx", ".js", ".jsx"],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
       },
     },
-    "import/order": ["error"],
+    'import/order': ['error'],
   },
   rules: {},
-};
+}
