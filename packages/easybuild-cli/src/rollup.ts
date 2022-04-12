@@ -26,7 +26,7 @@ export default function createForRollup() {
           const pkg = JSON.parse(content as string)
           const rootDependencies = pkg?.devDependencies || {}
           const resDevDependencies = { ...resJson.devDependencies, ...rootDependencies }
-          Object.assign(pkg, resJson, {
+          resJson = Object.assign(pkg, resJson, {
             devDependencies: resDevDependencies,
           })
         }
