@@ -1,3 +1,3 @@
 packages:
   - 'packages/**'
-  - '!packages/easybuild-cli/src/templates/**'
+  - '!packages/easybuild-cli/templates/**'

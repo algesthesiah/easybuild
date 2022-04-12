@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "easy build cli",
   "repository": "https://github.com/algesthesiah/easybuild",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
     "build": "rollup -c"
   },
   "bin": {
-    "easybuild": "index.js",
-    "eb": "index.js"
+    "easybuild": "bin/index.js",
+    "eb": "bin/index.js"
   },
   "keywords": [
     "build"
@@ -26,6 +26,7 @@
     "inquirer": "^8.2.2",
     "rollup": "^2.55.1",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-preserve-shebangs": "^0.2.0",
     "rollup-plugin-replace": "^2.2.0",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "commander": "^9.1.0",
+    "download-git-repo": "^3.0.2",
     "shelljs": "^0.8.5"
   }
 }
