@@ -2,7 +2,10 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "rootDir": "./",
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false
   },
   "include": ["index.ts", "src/*"],
-  "exclude": ["templates/*"],
+  "exclude": ["templates/*"]
 }

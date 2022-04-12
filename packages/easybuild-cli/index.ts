@@ -5,6 +5,7 @@
 // const inquirer = require('inquirer')
 import { Command } from 'commander'
 import createForBase from './src/base'
+import createForRollup from './src/rollup'
 
 const program = new Command()
 
@@ -20,10 +21,16 @@ program
     }
     if (name === 'base') {
       createForBase()
+      return
+    }
+    if (name === 'rollup') {
+      createForRollup()
+      return
     }
     console.log(`
 Examples:
   $ eb c base
+  $ eb c rollup
   $ eb c react`)
   })
   .addHelpText(
@@ -31,6 +38,7 @@ Examples:
     `
 Examples:
   $ eb c base
+  $ eb c rollup
   $ eb c react`
   )
 program.parse(process.argv)
