@@ -1,11 +1,11 @@
 {
   "name": "easybuild-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "easy build cli",
   "repository": "https://github.com/algesthesiah/easybuild",
   "main": "bin/index.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rimraf bin && rollup -c"
   },
   "bin": {
     "easybuild": "bin/index.js",
@@ -23,6 +23,7 @@
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@types/shelljs": "^0.8.11",
     "inquirer": "^8.2.2",
+    "rimraf": "^3.0.2",
     "rollup": "^2.55.1",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.0",

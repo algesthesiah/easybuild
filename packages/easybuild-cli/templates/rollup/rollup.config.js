@@ -7,7 +7,7 @@ import babel from '@rollup/plugin-babel'
 
 const config = [
   {
-    input: './index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: 'lib/index.js', // 通用模块

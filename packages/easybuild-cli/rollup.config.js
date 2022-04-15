@@ -5,7 +5,7 @@ import { terser } from 'rollup-plugin-terser'
 
 const config = [
   {
-    input: './index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: 'bin/index.js',

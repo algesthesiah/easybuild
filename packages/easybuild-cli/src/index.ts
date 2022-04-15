@@ -4,8 +4,8 @@
 // Node CLI 应用入口文件必须要有这样的文件头
 // const inquirer = require('inquirer')
 import { Command } from 'commander'
-import createForBase from './src/base'
-import createForRollup from './src/rollup'
+import createForBase from './base'
+import createForRollup from './rollup'
 
 const program = new Command()
 
