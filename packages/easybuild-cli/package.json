@@ -24,7 +24,6 @@
     "@types/shelljs": "^0.8.11",
     "inquirer": "^8.2.2",
     "rollup": "^2.55.1",
-    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-preserve-shebangs": "^0.2.0",
