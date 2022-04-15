@@ -1,4 +1,10 @@
 {
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "scripts": {
+    "build": "rimraf es && rimraf lib && rollup -c"
+  },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",

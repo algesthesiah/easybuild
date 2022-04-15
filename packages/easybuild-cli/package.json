@@ -1,6 +1,6 @@
 {
   "name": "easybuild-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "easy build cli",
   "repository": "https://github.com/algesthesiah/easybuild",
   "main": "bin/index.js",
