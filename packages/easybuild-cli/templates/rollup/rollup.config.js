@@ -11,7 +11,7 @@ const config = [
     input: './src/index.ts',
     output: [
       {
-        format: 'umd',
+        format: 'cjs',
         dir: 'lib',
       },
       {
