@@ -2,8 +2,14 @@ import path from 'path'
 import fs from 'fs'
 import { cp } from 'shelljs'
 
-export default function createForRollup() {
-  let promises = [path.join(__dirname, '../templates/rollup/dep.json'), './package.json'].map(function (_path) {
+export default function createForRollup(type?: 'dep' | 'build') {
+  let jobDep = ''
+  if (type === 'dep') {
+    jobDep = '../templates/rollup/dep.json'
+  } else if (type === 'build') {
+    jobDep = '../templates/rollup/build.json'
+  }
+  let promises = [path.join(__dirname, jobDep), './package.json'].map(function (_path) {
     return new Promise(
       function (_path, resolve, reject) {
         fs.readFile(_path, 'utf8', function (err, data) {

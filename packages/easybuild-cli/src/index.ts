@@ -24,13 +24,18 @@ program
       return
     }
     if (name === 'rollup') {
-      createForRollup()
+      createForRollup('build')
+      return
+    }
+    if (name === 'rollup-dep') {
+      createForRollup('dep')
       return
     }
     console.log(`
 Examples:
   $ eb c base
   $ eb c rollup
+  $ eb c rollup-dep
   $ eb c react`)
   })
   .addHelpText(
@@ -39,6 +44,7 @@ Examples:
 Examples:
   $ eb c base
   $ eb c rollup
+  $ eb c rollup-dep
   $ eb c react`
   )
 program.parse(process.argv)
