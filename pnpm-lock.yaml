@@ -29,8 +29,10 @@ importers:
       '@types/shelljs': ^0.8.11
       commander: ^9.1.0
       inquirer: ^8.2.2
+      lodash: ^4.17.21
       rimraf: ^3.0.2
       rollup: ^2.55.1
+      rollup-plugin-auto-external: ^2.0.0
       rollup-plugin-copy: ^3.4.0
       rollup-plugin-postcss: ^4.0.0
       rollup-plugin-preserve-shebangs: ^0.2.0
@@ -41,6 +43,7 @@ importers:
       shelljs: ^0.8.5
     dependencies:
       commander: 9.1.0
+      lodash: 4.17.21
       shelljs: 0.8.5
     devDependencies:
       '@rollup/plugin-alias': 3.1.9_rollup@2.70.1
@@ -51,6 +54,7 @@ importers:
       inquirer: 8.2.2
       rimraf: 3.0.2
       rollup: 2.70.1
+      rollup-plugin-auto-external: 2.0.0_rollup@2.70.1
       rollup-plugin-copy: 3.4.0
       rollup-plugin-postcss: 4.0.2
       rollup-plugin-preserve-shebangs: 0.2.0_rollup@2.70.1
@@ -1563,6 +1567,12 @@ packages:
 
   /builtin-status-codes/3.0.0:
     resolution: {integrity: sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=}
+    dev: true
+
+  /builtins/2.0.1:
+    resolution: {integrity: sha512-XkkVe5QAb6guWPXTzpSrYpSlN3nqEmrrE2TkAr/tp7idSF6+MONh9WvKrAuR3HiKLvoSgmbs8l1U9IPmMrIoLw==}
+    dependencies:
+      semver: 6.3.0
     dev: true
 
   /bytes/3.1.2:
@@ -4510,7 +4520,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols/2.2.0:
     resolution: {integrity: sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg==}
@@ -6412,6 +6421,19 @@ packages:
       inherits: 2.0.4
     dev: true
 
+  /rollup-plugin-auto-external/2.0.0_rollup@2.70.1:
+    resolution: {integrity: sha512-HQM3ZkZYfSam1uoZtAB9sK26EiAsfs1phrkf91c/YX+S07wugyRXSigBxrIwiLr5EPPilKYmoMxsrnlGBsXnuQ==}
+    engines: {node: '>=6'}
+    peerDependencies:
+      rollup: '>=0.45.2'
+    dependencies:
+      builtins: 2.0.1
+      read-pkg: 3.0.0
+      rollup: 2.70.1
+      safe-resolve: 1.0.0
+      semver: 5.7.1
+    dev: true
+
   /rollup-plugin-copy/3.4.0:
     resolution: {integrity: sha512-rGUmYYsYsceRJRqLVlE9FivJMxJ7X6jDlP79fmFkL8sJs7VVMSVyA2yfyL+PGyO/vJs4A87hwhgVfz61njI+uQ==}
     engines: {node: '>=8.3'}
@@ -6563,6 +6585,10 @@ packages:
     resolution: {integrity: sha1-QKNmnzsHfR6UPURinhV91IAjvy4=}
     dependencies:
       ret: 0.1.15
+    dev: true
+
+  /safe-resolve/1.0.0:
+    resolution: {integrity: sha1-/jT40p16O+z9JJ0KqKeZtcPPZVk=}
     dev: true
 
   /safer-buffer/2.1.2:

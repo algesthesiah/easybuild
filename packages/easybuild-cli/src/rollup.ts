@@ -1,6 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import { cp } from 'shelljs'
+import { merge } from 'lodash'
 
 export default function createForRollup(type?: 'dep' | 'build') {
   let jobDep = ''
@@ -9,7 +10,7 @@ export default function createForRollup(type?: 'dep' | 'build') {
   } else if (type === 'build') {
     jobDep = '../templates/rollup/build.json'
   }
-  let promises = [path.join(__dirname, jobDep), './package.json'].map(function (_path) {
+  let promises = [path.join(__dirname, jobDep), path.join(process.cwd(), './package.json')].map(function (_path) {
     return new Promise(
       function (_path, resolve, reject) {
         fs.readFile(_path, 'utf8', function (err, data) {
@@ -24,18 +25,9 @@ export default function createForRollup(type?: 'dep' | 'build') {
   })
   Promise.all(promises).then(function (results) {
     let resJson = { devDependencies: {} }
-    results.forEach((content, i) => {
+    results.forEach(content => {
       if (content) {
-        if (i === 0) {
-          Object.assign(resJson, JSON.parse(content as string))
-        } else {
-          const pkg = JSON.parse(content as string)
-          const rootDependencies = pkg?.devDependencies || {}
-          const resDevDependencies = { ...resJson.devDependencies, ...rootDependencies }
-          resJson = Object.assign(pkg, resJson, {
-            devDependencies: resDevDependencies,
-          })
-        }
+        resJson = merge(resJson, JSON.parse(content as string))
       }
     })
     const str = JSON.stringify(resJson, null, 2)

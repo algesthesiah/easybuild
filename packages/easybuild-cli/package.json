@@ -1,6 +1,6 @@
 {
   "name": "easybuild-cli",
-  "version": "1.0.16",
+  "version": "1.0.29",
   "description": "easy build cli",
   "repository": "https://github.com/algesthesiah/easybuild",
   "main": "bin/index.js",
@@ -25,6 +25,7 @@
     "inquirer": "^8.2.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.55.1",
+    "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-preserve-shebangs": "^0.2.0",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "commander": "^9.1.0",
+    "lodash": "^4.17.21",
     "shelljs": "^0.8.5"
   }
 }

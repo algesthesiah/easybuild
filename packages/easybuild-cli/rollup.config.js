@@ -1,7 +1,8 @@
 import typescript from 'rollup-plugin-typescript2'
 import commonjs from '@rollup/plugin-commonjs'
 import { preserveShebangs } from 'rollup-plugin-preserve-shebangs'
-import { terser } from 'rollup-plugin-terser'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import autoExternal from 'rollup-plugin-auto-external'
 
 const config = [
   {
@@ -14,7 +15,13 @@ const config = [
       },
     ],
     external: [id => id.includes('@babel/runtime')],
-    plugins: [preserveShebangs(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), terser()],
+    plugins: [
+      preserveShebangs(),
+      nodeResolve(),
+      commonjs(),
+      autoExternal(),
+      typescript({ tsconfig: './tsconfig.json' }),
+    ],
   },
 ]
 
