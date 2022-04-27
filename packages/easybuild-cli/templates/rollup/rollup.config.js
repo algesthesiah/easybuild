@@ -13,11 +13,13 @@ const config = [
       {
         format: 'cjs',
         dir: 'lib',
+        preserveModules: true,
       },
       {
         format: 'es',
         plugins: [getBabelOutputPlugin({ presets: ['@babel/preset-env'] })],
         dir: 'es',
+        preserveModules: true,
       },
     ],
     external: [id => id.includes('@babel/runtime')],

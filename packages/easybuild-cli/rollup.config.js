@@ -8,8 +8,9 @@ const config = [
     input: './src/index.ts',
     output: [
       {
-        file: 'bin/index.js',
         format: 'cjs',
+        dir: 'bin',
+        preserveModules: true,
       },
     ],
     external: [id => id.includes('@babel/runtime')],

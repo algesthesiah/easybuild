@@ -8,7 +8,7 @@ module.exports = {
     'react': {
       version: 'detect',
     },
-    'import/resolver': {
+    'import/resolver':{
       typescript: {},
       alias: {
         map: [],
