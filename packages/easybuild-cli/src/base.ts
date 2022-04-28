@@ -37,6 +37,7 @@ export function createForDep() {
 }
 export default function createForBase() {
   cp('-Rf', path.join(__dirname, '../templates/base/.husky'), path.join(process.cwd(), './'))
+  cp('-Rf', path.join(__dirname, '../templates/base/.vscode'), path.join(process.cwd(), './'))
   ;[
     '.editorconfig',
     '.eslintignore',
